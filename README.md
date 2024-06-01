@@ -2,9 +2,9 @@
 # AGTF-SGD
 Code for Accuracy-Guided Tensor Fusion for Sparse Gradient in Data Parallel Deep Learning.
 =======
-# Accuracy-Guided Tensor Fusion for Distributed Deep Learning
+# Accuracy-Guided Tensor Fusion for Sparse Gradient in Data Parallel Deep Learning
 ## Introduction
-We implement a prototype of AGTF-SGD on Pytorch based on OMGS-SGD shared publicly available（*INFOCOM 2020* (Optimal Merged-Gradient Sparsification Schocastic Gradident Descent (OMGS-SGD)). On this basis, we implement layer-wise gradients sparsification based on the importance of each layer and dynamically adjust the sparsity rate during tensor fusion, add the function of calculating and evaluating the change of sparse noise before and after tensor fusion, provide the accuracy-guided tensor fusion algrithom. The key idea of AGTF-SGD is to merge  adjacent layers and sparsify their merged gradients properly so that computations and communications can be pipelined as much as possible and control the test accuracy loss caused by sparse gradient fusion.
+We implement a prototype of AGTF-SGD on Pytorch based on OMGS-SGD shared publicly available（*INFOCOM 2020* (Optimal Merged-Gradient Sparsification Schocastic Gradident Descent (OMGS-SGD)). On this basis, we implement layer-wise gradients sparsification based on the importance of each layer and dynamically adjust the sparsity rate during tensor fusion, add the function of calculating and evaluating the change of sparse noise before and after tensor fusion, provide the accuracy-guided tensor fusion algrithom. The key idea of AGTF-SGD is to fuse adjacent layers and sparsify their merged gradients properly so that computations and communications can be pipelined as much as possible and control the test accuracy loss caused by sparse gradient fusion.
 
 ## Installation
 ### Prerequisites
